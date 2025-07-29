@@ -1,0 +1,20 @@
+car_name = mahindra
+actual_price = 9,69,425
+down_payment = 2,30,425
+intrest_rate = 8.0
+loan_years = 4.5
+loan_amount = actual_price - down_payment 
+
+#emi calculator 
+R = (intrest_rate /12) /100
+N = loan_years * 12
+  
+# emi formula 
+emi = (loan_amount * R *(1+R)**N) / ((1+R)**N - 1)
+total_payment = emi * N
+
+#OUTPUT 
+print(f"Loan Amount        : ₹{principal:,.2f}")
+print(f"Monthly EMI        : ₹{emi:,.2f}")
+print(f"Total Interest     : ₹{total_interest:,.2f}")
+print(f"Total Amount Paid  : ₹{total_payment:,.2f}")

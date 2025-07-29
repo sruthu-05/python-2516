@@ -1,0 +1,72 @@
+#if condition
+value = 10
+
+#chech\k if given value is positive 
+if value>0: 
+    #indentation erroe if no space before print 
+ print(f"Given {value} is  positive")
+
+ print("code will not execute") 
+
+ #condition for checking if the number is in range of (10 to 20)
+ num = 22 
+ if num<=20 and num>=10:
+  print(f"number {num} is in range of 10 to 20")
+
+#check if given conditions are positive or negative 
+value = -10
+if value>=0:
+  print(f"Given {value} is  positive")
+else:
+  print(f"Given {value} is  negative")
+
+  #imput() --> for taking inputs
+  print("Enter your email:")
+  email = input("Enter your email:")
+  print(f"welcome: {email}") 
+
+  #check vote eligibility 
+age = int(input("Enter your age:"))
+    print("you are eligible to vote")
+else:
+    print("you are  not eligible to vote")
+ #type error '>=' not supported between instances of 'str' and 'int'
+
+ #check vote eligibility using ternary operator 
+ #value_if_true if condition else value_if_false
+age = int(input("Enter your age:"))
+status = "eligible to vote" if age>=18 else "not eligible to vote"
+print(status)
+
+#elif ladder
+avg_score =int(input("enter your average score:"))
+if avg_score>=90:
+  print("A grade")
+elif avg_score>=75:
+  print("B grade")
+elif avg_score>=60:
+  print("C grade")
+elif avg_score>=50:
+  print("D grade")
+elif avg_score>=35:
+  print("E grade")
+else:
+  print("FAIL")
+
+ #match case
+ #invaild syntax error
+choice = int(input("enter your choice:"))
+match choice:
+      case 1:
+             print("0ne")
+      case 2:
+           print("two")
+      case 3:
+            print("three")
+      case 4:
+            print("four")
+      case 5:
+             print("five")
+      case _:
+             print("Invalid")
+
