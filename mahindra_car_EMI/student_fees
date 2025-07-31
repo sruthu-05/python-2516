@@ -1,0 +1,47 @@
+# Tuition Discount Calculation Program
+
+# Get user input
+student_name = input("Enter student's name: ")
+grade_level = int(input("Enter student's grade level (1-12): "))
+base_fee = float(input("Enter base tuition fee: "))
+is_topper = input("Is the student an academic topper? (Yes/No): ").strip().lower()
+
+# Input validation
+if grade_level < 1 or grade_level > 12:
+    print("Error: Grade level must be between 1 and 12.")
+else:
+    # Determine base discount percentage
+    discount_percentage = 0
+
+    if grade_level >= 9 and grade_level <= 12:
+        if is_topper == "yes":
+            discount_percentage = 20
+        else:
+            discount_percentage = 10
+    elif grade_level >= 6 and grade_level <= 8:
+        discount_percentage = 5
+    else:
+        discount_percentage = 0
+
+    # Apply additional discounts using match-case
+    match grade_level:
+        case 10:
+            discount_percentage += 3
+        case 12:
+            discount_percentage += 5
+        case _:
+            pass  # no additional discount
+
+    # Calculate discount amount and final fee
+    discount_amount = (discount_percentage / 100) * base_fee
+    final_fee = base_fee - discount_amount
+
+    # Output detailed summary
+    print("\n---- Tuition Fee Summary ----")
+    print(f"Student Name        : {student_name}")
+    print(f"Grade Level         : {grade_level}")
+    print(f"Academic Topper     : {'Yes' if is_topper == 'yes' else 'No'}")
+    print(f"Base Tuition Fee    : ₹{base_fee:.2f}")
+    print(f"Total Discount      : {discount_percentage:.2f}%")
+    print(f"Discount Amount     : ₹{discount_amount:.2f}")
+    print(f"Final Tuition Fee   : ₹{final_fee:.2f}")
