@@ -1,0 +1,85 @@
+#tuples
+empty_tuple = ()
+print(tuple(empty_tuple))
+print(empty_tuple)
+
+#numbers 
+tuple_nums = (10,20,30,40,50)
+print(tuple_nums)
+
+#texts 
+tuple_courses = tuple(("python","java","cloud","devops"))
+print(tuple_courses)
+
+#mixed
+tuples_mixed = tuple(("python","java","cloud","devops",10,20,30,40,50,5.5))
+print(tuples_mixed)
+
+#tuple_int = tuple(10)
+#tuple_int =tuple((10))
+tuple_int = tuple((10,))
+print(tuple_int)
+
+#perfome some conditionals 
+days = ("sun","mon","tue","wed","thu","fri","sat")
+day = input("Enter day name in a week")
+if day in days:
+       print("day exists")
+else:
+       print("invalid day")
+
+       
+      
+ #duplicates are allowed       
+tuple_nums = [10,20,30,40,50,50,50,30] 
+print(tuple_nums)
+
+#using range 
+custom_tuple = list(range(0,26,5))
+print(custom_tuple)
+
+#slicing
+tuple_nums = [10,20,30,40,50]
+print(tuple_nums[:])
+print(tuple_nums[1:4:-1])
+print(tuple_nums[1:4:1])
+print(tuple_nums[::-1])
+
+#tuple operations 
+tuple_nums_nums = [10,20,30,40,50]
+print(dir(tuple_nums_nums))
+
+#index()--> return  the index position
+tuple_nums = (10,20,30,40,50)
+print(tuple_nums.index(30))
+
+#count()--> count and return numbers 
+tuple_nums = (10,20,30,40,50)
+print(tuple_nums.count(40))
+
+#tuple paackig and unpacking 
+person = ("john",25,"python") #packing 
+name,age,course = person #unpacking 
+
+print(name)
+print(age)
+print(course)
+
+
+t1 = ([10,20],[30,40],[50,60])
+print(t1)
+t1[0][0] = 100
+print(t1)
+
+t1 = ([10,20],[30,40],[50,60])
+print(t1)
+#t1[1] = [300,400] # invalid --> change tuple
+#typeerror : 'tuple' object does not support item assignment 
+print(t1) 
+
+l1 = [(10,20),(30,40),(50,60)]
+print(l1)
+l1[0][0] = 100 #invalid
+#typerror : 'tuple' object does not support in tuple
+
+
