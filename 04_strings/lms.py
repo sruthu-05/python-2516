@@ -91,3 +91,4 @@ final_fee = base_course_fee - discount
 print(f"Base course fee: {base_course_fee}")
 print(f"You got discount: {discount}")
 print(f"After discount pay: {final_fee}")
+
